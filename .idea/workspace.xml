@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20d213fe-7565-45bd-82a2-6f0369c2be7a" name="Changes" comment="Exercise one -&#10;&#10;Curso Java. - Pildoras Informaticas Sockets II. Vídeo 191&#10;&#10;In order to the Server through the socket listens to the Client at all times, we will use a Tread">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/CLIENTS_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SERVER_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+    <list default="true" id="20d213fe-7565-45bd-82a2-6f0369c2be7a" name="Changes" comment="Exercise Two -&#10;&#10;Curso Java. - Pildoras Informaticas Sockets III Creación de chat I. Vídeo 192">
+      <change afterPath="$PROJECT_DIR$/src/main/java/PaqueteEnvio/PaqueteEnvio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +64,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src/main" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="PaqueteEnvio" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -125,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662057232433</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Exercise Two -&#10;&#10;Curso Java. - Pildoras Informaticas Sockets III Creación de chat I. Vídeo 192">
+      <created>1662134340659</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1662134340659</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,7 +153,8 @@
     <MESSAGE value="We had created the READ ME" />
     <MESSAGE value="Exercise one -&#10;Curso Java. - Pildoras Informaticas Sockets I. Vídeo 190" />
     <MESSAGE value="Exercise one -&#10;&#10;Curso Java. - Pildoras Informaticas Sockets II. Vídeo 191&#10;&#10;In order to the Server through the socket listens to the Client at all times, we will use a Tread" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise one -&#10;&#10;Curso Java. - Pildoras Informaticas Sockets II. Vídeo 191&#10;&#10;In order to the Server through the socket listens to the Client at all times, we will use a Tread" />
+    <MESSAGE value="Exercise Two -&#10;&#10;Curso Java. - Pildoras Informaticas Sockets III Creación de chat I. Vídeo 192" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise Two -&#10;&#10;Curso Java. - Pildoras Informaticas Sockets III Creación de chat I. Vídeo 192" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Sockets$Server.ic" NAME="Server Coverage Results" MODIFIED="1662056401693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

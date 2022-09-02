@@ -1,11 +1,13 @@
 package Server;
 
 import Client.Client;
+import PaqueteEnvio.PaqueteEnvio;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.DataInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -38,16 +40,24 @@ public class Server {
             try {
                 ServerSocket servidor = new ServerSocket(Client.PORT);
 
+                String nick, ip, mensaje;
+                PaqueteEnvio paquete_recibido;
                 while (true) {
-
                     Socket misocket = servidor.accept();
-                    DataInputStream flujo_entrada = new DataInputStream(misocket.getInputStream());
-                    String mensaje_texto = flujo_entrada.readUTF();
-                    areatexto.append("\n" + mensaje_texto);
-                    misocket.close();
+
+//                    Ex.Two
+                    ObjectInputStream paquete_datos = new ObjectInputStream(misocket.getInputStream());
+                    paquete_recibido = (PaqueteEnvio) paquete_datos.readObject();
+
+
+//                    Ex. One
+//                    DataInputStream flujo_entrada = new DataInputStream(misocket.getInputStream());
+//                    String mensaje_texto = flujo_entrada.readUTF();
+//                    areatexto.append("\n" + mensaje_texto);
+//                    misocket.close();
                 }
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
             }
         }
     }
