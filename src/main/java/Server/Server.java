@@ -14,8 +14,10 @@ public class Server {
         MarcoServidor miMarco = new MarcoServidor();
         miMarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
+
     public static class MarcoServidor extends JFrame implements Runnable {
         JTextArea areatexto;
+
         public MarcoServidor() {
             setBounds(1200, 300, 280, 350);
             JPanel milamina = new JPanel();
@@ -29,17 +31,21 @@ public class Server {
             Thread mihilo = new Thread(this);
             mihilo.start();
         }
+
         @Override
         public void run() {
             System.out.println("FUNCIONA");
             try {
                 ServerSocket servidor = new ServerSocket(Client.PORT);
-                Socket misocket = servidor.accept();
-                DataInputStream flujo_entrada = new DataInputStream(misocket.getInputStream());
-                String mensaje_texto = flujo_entrada.readUTF();
-                areatexto.append("\n" + mensaje_texto);
-                misocket.close();
 
+                while (true) {
+
+                    Socket misocket = servidor.accept();
+                    DataInputStream flujo_entrada = new DataInputStream(misocket.getInputStream());
+                    String mensaje_texto = flujo_entrada.readUTF();
+                    areatexto.append("\n" + mensaje_texto);
+                    misocket.close();
+                }
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
