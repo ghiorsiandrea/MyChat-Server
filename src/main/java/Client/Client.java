@@ -6,7 +6,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Client {
@@ -26,7 +28,7 @@ public class Client {
         }
     }
 
-    static class LaminaMarcoCliente extends JPanel {
+    static class LaminaMarcoCliente extends JPanel  implements Runnable{
         private JTextField campo1, nick, ip;
 
         private JTextArea campochat;
@@ -48,6 +50,29 @@ public class Client {
             EnviaTexto mievento = new EnviaTexto();
             miboton.addActionListener(mievento);
             add(miboton);
+
+            Thread mihilo = new Thread(this);
+            mihilo.start();
+        }
+
+
+
+        @Override
+        public void run() {
+            try {
+                ServerSocket servidor_cliente = new ServerSocket(9090);
+                Socket cliente;
+                PaqueteEnvio paqueteRecibido;
+                while (true) {
+                    cliente = servidor_cliente.accept();
+                    ObjectInputStream flujoentrada = new ObjectInputStream(cliente.getInputStream());
+                    paqueteRecibido = (PaqueteEnvio) flujoentrada.readObject();
+                    campochat.append("\n" + paqueteRecibido.getNick() + ": " + paqueteRecibido.getMensaje());
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
         private class EnviaTexto implements ActionListener {
