@@ -5,7 +5,6 @@ import PaqueteEnvio.PaqueteEnvio;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -58,9 +57,9 @@ public class Server {
                     Socket enviaDestinatario = new Socket(ip, 9090);
                     ObjectOutputStream paqueteReenvio = new ObjectOutputStream(enviaDestinatario.getOutputStream());
                     paqueteReenvio.writeObject(paquete_recibido);
+                    enviaDestinatario.close();
                     misocket.close();
 
-                    // Que el cliente este a la escuha permanentemente y pueda enviar y recibir informacion (server socket)
 
 //                    Ex. One
 //                    DataInputStream flujo_entrada = new DataInputStream(misocket.getInputStream());

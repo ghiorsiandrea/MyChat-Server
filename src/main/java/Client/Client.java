@@ -51,11 +51,10 @@ public class Client {
             miboton.addActionListener(mievento);
             add(miboton);
 
+            // Que el cliente este a la escuha permanentemente (9090)y pueda enviar y recibir informacion (server socket)
             Thread mihilo = new Thread(this);
             mihilo.start();
         }
-
-
 
         @Override
         public void run() {

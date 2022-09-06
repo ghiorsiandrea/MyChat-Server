@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20d213fe-7565-45bd-82a2-6f0369c2be7a" name="Changes" comment="Exercise Two -&#10;&#10;Curso Java. - Pildoras Informaticas Sockets IV Creación de chat II. Vídeo 193">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Server.java" afterDir="false" />
     </list>
@@ -66,6 +67,26 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="PaqueteEnvio" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.Servidor">
+    <configuration name="Cliente" type="Application" factoryName="Application" singleton="false">
+      <option name="MAIN_CLASS_NAME" value="Client.Client" />
+      <module name="Sockets" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Servidor" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Server.Server" />
+      <module name="Sockets" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Cliente" />
+      <item itemvalue="Application.Servidor" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -146,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662147327024</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Exercise Two -&#10;&#10;Curso Java. - Pildoras Informaticas Sockets IV Creación de chat II. Vídeo 193">
+      <created>1662399366743</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1662399366743</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
