@@ -1,4 +1,4 @@
-package Server;
+package org.ghiorsi.Server;
 
 import Client.Client;
 import PaqueteEnvio.PaqueteEnvio;
