@@ -1,7 +1,6 @@
 package org.ghiorsi.Server;
 
-import Client.Client;
-import PaqueteEnvio.PaqueteEnvio;
+import org.ghiorsi.chat.protocol.PaqueteEnvio;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,6 +15,8 @@ public class Server {
         MarcoServidor miMarco = new MarcoServidor();
         miMarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
+
+    public static final int PORT = Integer.parseInt(System.getenv("PORT"));
 
     public static class MarcoServidor extends JFrame implements Runnable {
         JTextArea areatexto;
@@ -38,7 +39,7 @@ public class Server {
         public void run() {
             System.out.println("FUNCIONA");
             try {
-                ServerSocket servidor = new ServerSocket(Client.PORT);
+                ServerSocket servidor = new ServerSocket(PORT);
 
                 String nick, ip, mensaje;
                 PaqueteEnvio paquete_recibido;
