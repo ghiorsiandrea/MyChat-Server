@@ -12,6 +12,8 @@
     <list default="true" id="20d213fe-7565-45bd-82a2-6f0369c2be7a" name="Changes" comment="We will use an own library named Paquete Envio">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghiorsi/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghiorsi/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +74,7 @@
       <envs>
         <env name="PORT" value="9999" />
       </envs>
-      <option name="MAIN_CLASS_NAME" value="org.ghiorsi.Server.Server" />
+      <option name="MAIN_CLASS_NAME" value="org.ghiorsi.server.Server" />
       <module name="Server" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -186,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662576507501</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="We will use an own library named Paquete Envio">
+      <created>1662662298476</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1662662298476</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

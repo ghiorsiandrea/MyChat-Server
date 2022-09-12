@@ -1,4 +1,4 @@
-package org.ghiorsi.Server;
+package org.ghiorsi.server;
 
 import org.ghiorsi.chat.protocol.PaqueteEnvio;
 
@@ -7,6 +7,7 @@ import java.awt.*;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -39,7 +40,10 @@ public class Server {
         public void run() {
             System.out.println("FUNCIONA");
             try {
-                ServerSocket servidor = new ServerSocket(PORT);
+                ServerSocket servidor = new ServerSocket();
+                servidor.bind(new InetSocketAddress("0.0.0.0" , PORT));
+
+                //ServerSocket servidor = new ServerSocket(PORT);
 
                 String nick, ip, mensaje;
                 PaqueteEnvio paquete_recibido;

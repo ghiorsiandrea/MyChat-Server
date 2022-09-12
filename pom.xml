@@ -36,9 +36,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>
-                                        org.ghiorsi.Server.Server
-                                    </mainClass>
+                                    <mainClass>org.ghiorsi.server.Server</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
