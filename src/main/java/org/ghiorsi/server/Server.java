@@ -7,6 +7,7 @@ import java.awt.*;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -50,7 +51,10 @@ public class Server {
                 while (true) {
                     Socket misocket = servidor.accept();
 
-//                    Ex.Two
+//                    Ex.Tree - Detecta Online
+                    InetAddress localizacion = misocket.getInetAddress();
+                    String IpRemota = localizacion.getHostAddress();
+                    System.out.println("Online con"  + IpRemota);
                     ObjectInputStream paquete_datos = new ObjectInputStream(misocket.getInputStream());
                     paquete_recibido = (PaqueteEnvio) paquete_datos.readObject();
                     nick = paquete_recibido.getNick();
