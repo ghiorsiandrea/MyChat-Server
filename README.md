@@ -32,7 +32,7 @@ service, and returns the results in the form of a response.
 
 <br>
 
-###                   SERVER IS   THIS IS THE SERVER'S APP
+###                   MYCHAT-SERVER IS   THIS IS THE SERVER'S APP
 
 <br>
 
