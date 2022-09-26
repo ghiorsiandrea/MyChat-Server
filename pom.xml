@@ -36,7 +36,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>org.ghiorsi.server.Server</mainClass>
+                                    <mainClass>org.ghiorsi.chat.server.Server</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>

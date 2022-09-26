@@ -1,4 +1,4 @@
-package org.ghiorsi.server;
+package org.ghiorsi.chat.server;
 
 import org.ghiorsi.chat.protocol.PaqueteEnvio;
 
@@ -51,24 +51,27 @@ public class Server {
                 while (true) {
                     Socket misocket = servidor.accept();
 
-//                    Ex.Tree - Detecta Online
-                    InetAddress localizacion = misocket.getInetAddress();
-                    String IpRemota = localizacion.getHostAddress();
-                    System.out.println("Online con"  + IpRemota);
                     ObjectInputStream paquete_datos = new ObjectInputStream(misocket.getInputStream());
                     paquete_recibido = (PaqueteEnvio) paquete_datos.readObject();
                     nick = paquete_recibido.getNick();
                     ip = paquete_recibido.getIp();
                     mensaje = paquete_recibido.getMensaje();
-                    areatexto.append("\n" + "De: " + nick + ", para: " + ip  + " " + "\n" + "" + mensaje + "" );
 
-                    // Puente de comunicacion por donde fluiran los datos para reenviarse
-                    Socket enviaDestinatario = new Socket(ip, 9090);
-                    ObjectOutputStream paqueteReenvio = new ObjectOutputStream(enviaDestinatario.getOutputStream());
-                    paqueteReenvio.writeObject(paquete_recibido);
-                    enviaDestinatario.close();
-                    misocket.close();
+                    if (!mensaje.equals(" online")) {
+                        areatexto.append("\n" + "De: " + nick + ", para: " + ip  + " " + "\n" + "" + mensaje + "" );
 
+                        // Puente de comunicacion por donde fluiran los datos para reenviarse
+                        Socket enviaDestinatario = new Socket(ip, 9090);
+                        ObjectOutputStream paqueteReenvio = new ObjectOutputStream(enviaDestinatario.getOutputStream());
+                        paqueteReenvio.writeObject(paquete_recibido);
+                        enviaDestinatario.close();
+                        misocket.close();
+                    } else {
+                        //                    Ex.Tree - Detecta Online
+                        InetAddress localizacion = misocket.getInetAddress();
+                        String IpRemota = localizacion.getHostAddress();
+                        System.out.println("Online con"  + IpRemota);
+                    }
 
 //                    Ex. One
 //                    DataInputStream flujo_entrada = new DataInputStream(misocket.getInputStream());
