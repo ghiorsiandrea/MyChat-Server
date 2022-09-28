@@ -20,6 +20,8 @@ public class Server {
 
     public static final int PORT = Integer.parseInt(System.getenv("PORT"));
 
+    public static final String  ONLINE= " Online";
+
     public static class MarcoServidor extends JFrame implements Runnable {
         JTextArea areatexto;
 
@@ -57,7 +59,7 @@ public class Server {
                     ip = paquete_recibido.getIp();
                     mensaje = paquete_recibido.getMensaje();
 
-                    if (!mensaje.equals(" online")) {
+                    if (!mensaje.equals(ONLINE)) {
                         areatexto.append("\n" + "De: " + nick + ", para: " + ip  + " " + "\n" + "" + mensaje + "" );
 
                         // Puente de comunicacion por donde fluiran los datos para reenviarse
