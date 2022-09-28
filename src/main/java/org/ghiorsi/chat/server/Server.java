@@ -72,7 +72,7 @@ public class Server {
                         //                    Ex.Tree - Detecta Online
                         InetAddress localizacion = misocket.getInetAddress();
                         String IpRemota = localizacion.getHostAddress();
-                        System.out.println("Online con"  + IpRemota);
+                        System.out.println("\nOnline con la IP " + IpRemota);
                     }
 
 //                    Ex. One

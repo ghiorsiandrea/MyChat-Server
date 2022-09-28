@@ -9,8 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20d213fe-7565-45bd-82a2-6f0369c2be7a" name="Changes" comment="Exercise Tree -&#10;    Curso Java. - Pildoras Informaticas Sockets V-VI Creación de chat V-VI. Vídeos 196-197">
+    <list default="true" id="20d213fe-7565-45bd-82a2-6f0369c2be7a" name="Changes" comment="Exercise Tree -&#10;    Curso Java. - Pildoras Informaticas Sockets V-VI Creación de chat V-VI. Vídeos 196-198">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghiorsi/chat/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghiorsi/chat/server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664215829973</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Exercise Tree -&#10;    Curso Java. - Pildoras Informaticas Sockets V-VI Creación de chat V-VI. Vídeos 196-198">
+      <created>1664377847912</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1664377847912</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -257,7 +265,8 @@
     <MESSAGE value="We made a little change in the code in order to improve the app" />
     <MESSAGE value="We actualised the READ ME" />
     <MESSAGE value="Exercise Tree -&#10;    Curso Java. - Pildoras Informaticas Sockets V-VI Creación de chat V-VI. Vídeos 196-197" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise Tree -&#10;    Curso Java. - Pildoras Informaticas Sockets V-VI Creación de chat V-VI. Vídeos 196-197" />
+    <MESSAGE value="Exercise Tree -&#10;    Curso Java. - Pildoras Informaticas Sockets V-VI Creación de chat V-VI. Vídeos 196-198" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise Tree -&#10;    Curso Java. - Pildoras Informaticas Sockets V-VI Creación de chat V-VI. Vídeos 196-198" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Sockets$Server.ic" NAME="Server Coverage Results" MODIFIED="1662056401693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
