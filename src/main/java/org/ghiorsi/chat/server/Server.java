@@ -11,6 +11,7 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 
 public class Server {
     public static void main(String[] args) {
@@ -20,7 +21,7 @@ public class Server {
 
     public static final int PORT = Integer.parseInt(System.getenv("PORT"));
 
-    public static final String  ONLINE= " Online";
+    public static final String ONLINE = " Online";
 
     public static class MarcoServidor extends JFrame implements Runnable {
         JTextArea areatexto;
@@ -44,11 +45,12 @@ public class Server {
             System.out.println("FUNCIONA");
             try {
                 ServerSocket servidor = new ServerSocket();
-                servidor.bind(new InetSocketAddress("0.0.0.0" , PORT));
+                servidor.bind(new InetSocketAddress("0.0.0.0", PORT));
 
                 //ServerSocket servidor = new ServerSocket(PORT);
 
                 String nick, ip, mensaje;
+                ArrayList<String> listaIp = new ArrayList<String>();
                 PaqueteEnvio paquete_recibido;
                 while (true) {
                     Socket misocket = servidor.accept();
@@ -60,7 +62,7 @@ public class Server {
                     mensaje = paquete_recibido.getMensaje();
 
                     if (!mensaje.equals(ONLINE)) {
-                        areatexto.append("\n" + "De: " + nick + ", para: " + ip  + " " + "\n" + "" + mensaje + "" );
+                        areatexto.append("\n" + "De: " + nick + ", para: " + ip + " " + "\n" + "" + mensaje + "");
 
                         // Puente de comunicacion por donde fluiran los datos para reenviarse
                         Socket enviaDestinatario = new Socket(ip, 9090);
@@ -69,11 +71,28 @@ public class Server {
                         enviaDestinatario.close();
                         misocket.close();
                     } else {
-                        //                    Ex.Tree - Detecta Online
+                        //     -------    Ex.Tree - Detecta Online    -------
                         InetAddress localizacion = misocket.getInetAddress();
                         String IpRemota = localizacion.getHostAddress();
-                        System.out.println("\nOnline con la IP " + IpRemota);
+                        //System.out.println("\nOnline con la IP " + IpRemota);
+
+                        listaIp.add(IpRemota);
+
+                        paquete_recibido.setIps(listaIp);
+
+                        for(String z: listaIp) {
+                            System.out.println("Array: " + z);
+
+                            // Puente de comunicacion por donde fluiran los datos para reenviarse
+                            Socket enviaDestinatario = new Socket(z, 9090);
+                            ObjectOutputStream paqueteReenvio = new ObjectOutputStream(enviaDestinatario.getOutputStream());
+                            paqueteReenvio.writeObject(paquete_recibido);
+                            enviaDestinatario.close();
+                            misocket.close();
+                        }
                     }
+
+                    //     -------    Ex.Tree - Detecta Online    -------
 
 //                    Ex. One
 //                    DataInputStream flujo_entrada = new DataInputStream(misocket.getInputStream());
