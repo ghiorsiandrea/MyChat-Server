@@ -1,6 +1,6 @@
 package org.ghiorsi.chat.server;
 
-import org.ghiorsi.chat.protocol.PaqueteEnvio;
+import org.ghiorsi.chat.protocol.ShippingPackage;
 
 import javax.swing.*;
 import java.awt.*;
@@ -51,12 +51,12 @@ public class Server {
 
                 String nick, ip, mensaje;
                 ArrayList<String> listaIp = new ArrayList<String>();
-                PaqueteEnvio paquete_recibido;
+                ShippingPackage paquete_recibido;
                 while (true) {
                     Socket misocket = servidor.accept();
 
                     ObjectInputStream paquete_datos = new ObjectInputStream(misocket.getInputStream());
-                    paquete_recibido = (PaqueteEnvio) paquete_datos.readObject();
+                    paquete_recibido = (ShippingPackage) paquete_datos.readObject();
                     nick = paquete_recibido.getNick();
                     ip = paquete_recibido.getIp();
                     mensaje = paquete_recibido.getMensaje();
