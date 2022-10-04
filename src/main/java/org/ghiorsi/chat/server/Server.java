@@ -74,7 +74,7 @@ public class Server {
                     String localizacionIp = misocket.getInetAddress().getHostAddress();
 
                     if (!mensaje.equals(ONLINE)) {
-                        areatexto.append("\n" + "De: " + nick + ", para: " + localizacionIp + " " + "\n" + "" + mensaje + "");
+                        areatexto.append("\n" + "FROM: " + nick + ", TO: " + localizacionIp + " " + "\n" + "" + mensaje + "");
 
                         // Communication bridge through which the data will flow to be forwarded
 
